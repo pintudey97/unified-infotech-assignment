@@ -26,24 +26,16 @@ $('.new-updates-carousel').owlCarousel({
     animateOut: 'fadeOut'
 });
 
-
-// window.onscroll = function() {myFunction()};
-// var header = document.getElementById("header");
-// var sticky = header.offsetTop;
-
-// function myFunction() {
-//   if (window.pageYOffset > sticky) {
-//     header.classList.add("sticky");
-//   } else {
-//     header.classList.remove("sticky");
-//   }
-// }
+$(".scroll-btn").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#jobs").offset().top
+    }, 2000);
+});
 
 
 $(window).scroll(function(){
     var sticky = $('#header'),
         scroll = $(window).scrollTop();
-  
     if (scroll >= 200) sticky.addClass('sticky');
     else sticky.removeClass('sticky');
   });
