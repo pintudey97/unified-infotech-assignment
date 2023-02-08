@@ -1,0 +1,84 @@
+//color
+$primary-color-bg:#28588C;
+$secondary-color-bg:#E8622A;
+$white-bg:#fff;
+$black-bg:#000;
+$dark-green-bg:#3D6C40;
+
+$blue-bg:#4492C6;
+$primary-subtance-bg:#29588C;
+$footer-bg:#414445;
+
+$primary-color-text:#28588C;
+$secondary-color-text:#E8622A;
+$white-text:#fff;
+$black-text:#000;
+$dark-green-text:#3D6C40;
+
+//
+$primary-font: 'Open Sans', sans-serif;
+
+
+%owl-common{
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.300781) !important;
+    border-radius: 360px;
+    display: inline-block;
+    color: $white-text !important;
+    &:focus{
+        outline: 0px;
+    }
+    &:hover{
+        outline: 0px;
+        color: $white-text !important;
+        background-color: $secondary-color-bg;
+        border: 1px solid $secondary-color-bg !important;
+    }
+}
+
+
+// $brkpoint-xs : 480px;
+// $brkpoint-sm : 767px;
+// $brkpoint-md : 991px;
+// $brkpoint-lg : 1999px;
+// $brkpoint-xl : 1340px;
+// $brkpoint-xll : 1450px;
+
+@mixin devices ($breakpoint) {
+    @if $breakpoint == xs {    
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == sm {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media only screen and (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media only screen and (max-width: 1199px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media only screen and (max-width: 1340px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xll {
+    @media only screen and (max-width: 1450px) {
+      @content;
+    }
+  }
+}
